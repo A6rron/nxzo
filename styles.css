@@ -89,3 +89,15 @@ body {
 .greyed-out {
     color: grey; /* Change text color to grey */
 }
+
+.footer {
+    font-family: monospace;
+    position: fixed;
+    bottom: 55px;
+    width: 100%;
+}
+
+.footer-link {
+    color: rgb(167, 167, 167);
+    text-decoration: none;
+}
