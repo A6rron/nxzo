@@ -1,7 +1,13 @@
 body {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: row; /* Align items in a row */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
     background-color: #000000; /* Set background color to black */
     color: white; /* Optional: Set text color to white for visibility */
     text-align: center; /* Center align text and image */
+    font-family: 'Anja Eliane', sans-serif; /* Set default font to Anja Eliane */
 }
 
 .centered-image {
@@ -31,3 +37,53 @@ body {
     right: 0; /* Align to the right */
 }
 
+.studio, .partner, .collective {
+    margin: 0 99px; /* Add horizontal margin for spacing */
+    position: relative; /* Position relative for tooltip positioning */
+}
+
+.tooltiptext {
+    visibility: hidden; /* Hide tooltip by default */
+    width: 200px; /* Set width of tooltip */
+    background-color: rgba(0, 0, 0, 0.8); /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding */
+    position: absolute; /* Position absolutely */
+    z-index: 1; /* Ensure it appears above other elements */
+    bottom: 125%; /* Position above the text */
+    left: 50%; /* Center horizontally */
+    margin-left: -100px; /* Adjust to center */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s, visibility 0.3s; /* Fade in/out effect */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible; /* Show tooltip on hover */
+    opacity: 1; /* Fade in */
+}
+
+.fade-out {
+    opacity: 0; /* Fade out effect */
+    visibility: hidden; /* Hide the tooltip */
+}
+
+.studio {
+    font-size: 24px; /* Set font size for studio text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.partner {
+    font-size: 24px; /* Set font size for partner text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.collective {
+    font-size: 24px; /* Set font size for collective text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.greyed-out {
+    color: grey; /* Change text color to grey */
+}
