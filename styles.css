@@ -119,7 +119,7 @@ body {
 
     .tooltip .tooltiptext {
         width: 80px; /* Increase tooltip width for better fit on smaller screens */
-        font-size: 16px; /* Adjust font size for tooltip text */
+        font-size: 18px; /* Adjust font size for tooltip text */
         margin-left: -40px; /* Center tooltip horizontally */
     }
 
@@ -144,7 +144,7 @@ body {
     .tooltip .tooltiptext {
         width: 70px; /* Adjust tooltip width for mobile */
         margin-left: -35px; /* Center tooltip horizontally */
-        font-size: 12px; /* Adjusted font size for tooltip text on mobile */
+        font-size: 14px; /* Adjusted font size for tooltip text on mobile */
     }
 
     .footer {
