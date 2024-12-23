@@ -150,11 +150,12 @@ body {
     }
 
     .footer {
-        font-size: 12px; /* Further adjust footer font size */
+        font-size: 11px; /* Further adjust footer font size */
+        bottom: 56px;
     }
 
     .footer-link {
-        font-size: 12px; /* Further adjust footer link font size */
+        font-size: 11px; /* Further adjust footer link font size */
     }
 }
 
