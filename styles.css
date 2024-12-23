@@ -1,8 +1,8 @@
 body {
     display: flex; /* Use flexbox for centering */
-    flex-direction: row; /* Align items in a row */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    flex-direction: row; /* Stack items horizontally */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     height: 100vh; /* Full viewport height */
     background-color: #000000; /* Set background color to black */
     color: white; /* Optional: Set text color to white for visibility */
@@ -38,7 +38,7 @@ body {
 }
 
 .studio, .partner, .collective {
-    margin: 0 99px; /* Add horizontal margin for spacing */
+    margin: 0 99px; 
     position: relative; /* Position relative for tooltip positioning */
 }
 
@@ -63,7 +63,6 @@ body {
 .tooltip:hover .tooltiptext {
     visibility: visible; /* Show tooltip on hover */
     opacity: 1; /* Fade in */
-    font-size: 22px; /* Set smaller font size on hover */
 }
 
 .fade-out {
@@ -101,3 +100,59 @@ body {
     color: rgb(167, 167, 167);
     text-decoration: none;
 }
+
+@media (max-width: 768px) { /* For tablets and smaller devices */
+    body {
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .centered-image {
+        width: 100px; /* Reduce image size for smaller screens */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .studio, .partner, .collective {
+        margin: 0 30px; /* Remove horizontal margin for centering */
+        font-size: 24px; /* Adjust font size for readability */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .tooltip .tooltiptext {
+        width: 80px; /* Increase tooltip width for better fit on smaller screens */
+        font-size: 16px; /* Adjust font size for tooltip text */
+        margin-left: -40px; /* Center tooltip horizontally */
+    }
+
+    .footer {
+        font-size: 14px; /* Adjust footer font size */
+    }
+
+    .footer-link {
+        font-size: 14px; /* Adjust footer link font size */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile phones */
+    .centered-image {
+        width: 80px; /* Further reduce image size */
+    }
+
+    .studio, .partner, .collective {
+        font-size: 20px; /* Further adjust font size */
+    }
+
+    .tooltip .tooltiptext {
+        width: 70px; /* Adjust tooltip width for mobile */
+        margin-left: -35px; /* Center tooltip horizontally */
+        font-size: 12px; /* Adjusted font size for tooltip text on mobile */
+    }
+
+    .footer {
+        font-size: 12px; /* Further adjust footer font size */
+    }
+
+    .footer-link {
+        font-size: 12px; /* Further adjust footer link font size */
+    }
+}
+
