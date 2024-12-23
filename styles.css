@@ -127,12 +127,12 @@ body {
 
     .footer {
         font-size: 14px; /* Adjust footer font size */
-        bottom: 56px;
+        bottom: 60px;
     }
 
     .footer-link {
         font-size: 14px; /* Adjust footer link font size */
-        bottom: 56px;
+        bottom: 60px;
     }
 }
 
@@ -152,13 +152,13 @@ body {
     }
 
     .footer {
-        font-size: 11px; /* Further adjust footer font size */
-        bottom: 56px;
+        font-size: 10px; /* Further adjust footer font size for mobile */
+        bottom: 21px; /* Adjust bottom position for mobile */
     }
 
     .footer-link {
-        font-size: 11px; /* Further adjust footer link font size */
-        bottom: 56px;
+        font-size: 10px; /* Further adjust footer link font size for mobile */
+        bottom: 21px; /* Adjust bottom position for mobile */
     }
 }
 
