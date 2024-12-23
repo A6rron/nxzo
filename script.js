@@ -32,7 +32,8 @@ autoHighlight(); // Call the function to start highlighting
 tooltips.forEach(tooltip => {
     tooltip.addEventListener('mouseenter', () => {
         clearInterval(autoHighlightInterval); // Stop automatic highlighting on hover
-        highlightTooltip(Array.from(tooltips).indexOf(tooltip)); // Highlight the hovered tooltip
+        currentIndex = Array.from(tooltips).indexOf(tooltip); // Set currentIndex to the hovered tooltip
+        highlightTooltip(currentIndex); // Highlight the hovered tooltip
     });
 
     tooltip.addEventListener('mouseleave', () => {
