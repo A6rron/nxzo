@@ -127,10 +127,12 @@ body {
 
     .footer {
         font-size: 14px; /* Adjust footer font size */
+        bottom: 56px;
     }
 
     .footer-link {
         font-size: 14px; /* Adjust footer link font size */
+        bottom: 56px;
     }
 }
 
@@ -156,6 +158,7 @@ body {
 
     .footer-link {
         font-size: 11px; /* Further adjust footer link font size */
+        bottom: 56px;
     }
 }
 
