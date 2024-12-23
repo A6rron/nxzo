@@ -92,13 +92,15 @@ body {
 .footer {
     font-family: monospace;
     position: fixed;
-    bottom: 55px;
+    bottom: 56px;
     width: 100%;
+    font-size: 11px; /* Adjusted footer font size */
 }
 
 .footer-link {
     color: rgb(167, 167, 167);
     text-decoration: none;
+    font-size: 11px; /* Adjusted footer link font size */
 }
 
 @media (max-width: 768px) { /* For tablets and smaller devices */
