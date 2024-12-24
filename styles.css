@@ -1,3 +1,4 @@
+/* Layout Styles */
 body {
     display: flex; /* Use flexbox for centering */
     flex-direction: row; /* Stack items horizontally */
@@ -17,31 +18,27 @@ body {
     margin: 0; /* Remove margin to position it exactly */
 }
 
-.top-left {
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
+/* Positioning Classes */
+.top-left, .top-right, .bottom-left, .bottom-right {
+    position: absolute; /* Ensure absolute positioning */
 }
 
-.top-right {
-    top: 0; /* Align to the top */
-    right: 0; /* Align to the right */
-}
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
 
-.bottom-left {
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Align to the left */
-}
-
-.bottom-right {
-    bottom: 0; /* Align to the bottom */
-    right: 0; /* Align to the right */
-}
-
+/* Flexbox Containers */
 .studio, .partner, .collective {
-    margin: 0 99px; 
-    position: relative; /* Position relative for tooltip positioning */
+    margin: 0 auto; /* Center elements horizontally */
+    text-align: center; /* Center text within these elements */
+    position: relative; /* Ensure relative positioning for tooltip */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: row; /* Stack items horizontally */
+    align-items: center; /* Center items horizontally */
 }
 
+/* Tooltip Styles */
 .tooltiptext {
     visibility: hidden; /* Hide tooltip by default */
     width: 200px; /* Set width of tooltip */
@@ -53,7 +50,7 @@ body {
     position: absolute; /* Position absolutely */
     z-index: 1; /* Ensure it appears above other elements */
     bottom: 125%; /* Position above the text */
-    left: 50%; /* Center horizontally */
+    left: 50%; /* Center tooltip horizontally */
     margin-left: -100px; /* Adjust to center */
     opacity: 0; /* Start invisible */
     transition: opacity 0.3s, visibility 0.3s; /* Fade in/out effect */
@@ -70,18 +67,9 @@ body {
     visibility: hidden; /* Hide the tooltip */
 }
 
-.studio {
-    font-size: 30px; /* Set font size for studio text */
-    font-weight: bold; /* Make the text bold */
-}
-
-.partner {
-    font-size: 30px; /* Set font size for partner text */
-    font-weight: bold; /* Make the text bold */
-}
-
-.collective {
-    font-size: 30px; /* Set font size for collective text */
+/* Typography Styles */
+.studio, .partner, .collective {
+    font-size: 30px; /* Set font size for studio, partner, and collective text */
     font-weight: bold; /* Make the text bold */
 }
 
@@ -89,10 +77,13 @@ body {
     color: grey; /* Change text color to grey */
 }
 
+/* Footer Styles */
 .footer {
     font-family: monospace;
-    position: fixed;
-    bottom: 56px;
+    position: absolute; /* Change from fixed to absolute */
+    bottom: 60px; /* Adjust the distance from the bottom as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to center */
     width: 100%;
     font-size: 11px; /* Adjusted footer font size */
 }
@@ -103,62 +94,46 @@ body {
     font-size: 11px; /* Adjusted footer link font size */
 }
 
-@media (max-width: 768px) { /* For tablets and smaller devices */
+/* Media Queries */
+@media (max-width: 768px) { /* Media query for mobile screens */
     body {
-        padding: 20px; /* Add padding for better spacing */
-    }
-
-    .centered-image {
-        width: 100px; /* Reduce image size for smaller screens */
-        margin: 10px 0; /* Add margin for spacing */
-    }
-
-    .studio, .partner, .collective {
-        margin: 0 30px; /* Remove horizontal margin for centering */
-        font-size: 24px; /* Adjust font size for readability */
-        text-align: center; /* Center text for mobile */
-    }
-
-    .tooltip .tooltiptext {
-        width: 80px; /* Increase tooltip width for better fit on smaller screens */
-        font-size: 20px; /* Adjust font size for tooltip text */
-        margin-left: -40px; /* Center tooltip horizontally */
-    }
-
-    .footer {
-        font-size: 14px; /* Adjust footer font size */
-        bottom: 60px;
-    }
-
-    .footer-link {
-        font-size: 14px; /* Adjust footer link font size */
-        bottom: 60px;
-    }
-}
-
-@media (max-width: 480px) { /* For mobile phones */
-    .centered-image {
-        width: 80px; /* Further reduce image size */
+        flex-direction: row; /* Change from column to row */
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+        gap: 20px; /* Add some spacing between items */
+        justify-content: center; /* Ensure center alignment */
     }
 
     .studio, .partner, .collective {
-        font-size: 20px; /* Further adjust font size */
+        margin: 0 20px; /* Increased horizontal margin from 10px to 20px */
+        display: inline-flex; /* Keep them inline */
+        padding: 0 10px; /* Added padding for extra spacing */
     }
 
-    .tooltip .tooltiptext {
-        width: 70px; /* Adjust tooltip width for mobile */
-        margin-left: -35px; /* Center tooltip horizontally */
-        font-size: 16px; /* Adjusted font size for tooltip text on mobile */
+    .centered-image {
+        width: 100px; /* Adjust image width for mobile */
+    }
+
+    .studio, .partner, .collective {
+        margin: 0; /* Remove margin to allow horizontal stacking */
+        font-size: 24px; /* Adjusted font size for studio, partner, and collective texts */
+        width: auto; /* Allow width to adjust based on content */
+    }
+
+    .tooltiptext {
+        left: 50%; /* Center relative to parent */
+        transform: translateX(-50%); /* Center the tooltip */
+        margin-left: 0; /* Remove margin since we're using transform */
+        width: 140px;
+        font-size: 16px;
     }
 
     .footer {
-        font-size: 10px; /* Further adjust footer font size for mobile */
-        bottom: 21px; /* Adjust bottom position for mobile */
+        font-size: 9px; /* Adjusted footer font size for mobile */
+        bottom: 45px; 
     }
 
     .footer-link {
-        font-size: 10px; /* Further adjust footer link font size for mobile */
-        bottom: 21px; /* Adjust bottom position for mobile */
+        font-size: 9px; /* Adjusted footer link font size for mobile */
     }
 }
 
