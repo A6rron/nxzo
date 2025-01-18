@@ -95,16 +95,16 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 768px) { /* Media query for mobile screens */
+@media (max-width: 768px) { /* Media query for small mobile screens */
     body {
-        flex-direction: row; /* Change from column to row */
+        flex-direction: column; /* Change to column for better stacking */
         flex-wrap: wrap; /* Allow items to wrap if needed */
         gap: 20px; /* Add some spacing between items */
         justify-content: center; /* Ensure center alignment */
     }
 
     .studio, .partner, .collective {
-        margin: 0 20px; /* Increased horizontal margin from 10px to 20px */
+        margin: 0 20px; /* Increased horizontal margin */
         display: inline-flex; /* Keep them inline */
         padding: 0 10px; /* Added padding for extra spacing */
     }
@@ -134,6 +134,31 @@ body {
 
     .footer-link {
         font-size: 9px; /* Adjusted footer link font size for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Media query for larger narrow screens */
+    body {
+        flex-direction: row; /* Change back to row for larger screens */
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+        gap: 15px; /* Add some spacing between items */
+        justify-content: center; /* Ensure center alignment */
+    }
+
+    .centered-image {
+        width: 120px; /* Adjust image width for larger narrow screens */
+    }
+
+    .studio, .partner, .collective {
+        font-size: 28px; /* Adjusted font size for larger narrow screens */
+    }
+
+    .footer {
+        font-size: 10px; /* Adjusted footer font size for larger narrow screens */
+    }
+
+    .footer-link {
+        font-size: 10px; /* Adjusted footer link font size for larger narrow screens */
     }
 }
 
